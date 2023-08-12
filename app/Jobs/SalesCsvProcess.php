@@ -9,7 +9,6 @@ use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
-use Illuminate\Contracts\Queue\ShouldBeUnique;
 use Throwable;
 
 class SalesCsvProcess implements ShouldQueue
@@ -23,6 +22,7 @@ class SalesCsvProcess implements ShouldQueue
     {
         $this->data = $data;
         $this->header = $header;
+        // dd("Data that we want to insert", $this->data, "Database Column Names", $this->header);
     }
 
     /**

@@ -15,6 +15,7 @@ class SalesController extends Controller
     public function upload() {
         if (request()->has('mycsv')) {
             // $data = array_map('str_getcsv', file(request()->mycsv));
+            // return $data[0];
             $data = file(request()->mycsv);
 
             // If we save 1/2 million of data at the same time, there will be a Maximum execution time of 60 secs exceeded.
